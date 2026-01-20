@@ -1,0 +1,30 @@
+<h3>Examination Schedule</h3>
+
+<table border="1">
+    <tr>
+        <th>Subject Code</th>
+        <th>Subject Name</th>
+        <th>Date</th>
+        <th>Time</th>
+    </tr>
+    <tr>
+        <td>IT401</td>
+        <td>Data Structures</td>
+        <td>10-04-2026</td>
+        <td>10:00 AM – 1:00 PM</td>
+    </tr>
+</table>
+
+<h3>Important Instructions</h3>
+<ul>
+    <li>Carry hall ticket</li>
+    <li>Bring ID card</li>
+    <li>No electronic devices</li>
+</ul>
+
+<p>
+    Visit:
+    <a href="https://www.exampleuniversity.com" target="_blank">
+        University Website
+    </a>
+</p>

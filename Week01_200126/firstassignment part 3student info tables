@@ -1,0 +1,21 @@
+<table border="1">
+    <tr>
+        <td rowspan="4">
+            <img src="final.jpg" alt="Student Photo" width="120">
+        </td>
+        <th>Student Name</th>
+        <td>unknown</td>
+    </tr>
+    <tr>
+        <th>Roll Number</th>
+        <td>5024234</td>
+    </tr>
+    <tr>
+        <th>Course</th>
+        <td>B.Tech IT</td>
+    </tr>
+    <tr>
+        <th>Semester</th>
+        <td>IV</td>
+    </tr>
+</table>

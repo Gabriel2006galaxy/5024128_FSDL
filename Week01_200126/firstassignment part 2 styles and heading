@@ -1,0 +1,17 @@
+<style>
+    body {
+        font-family: Arial;
+        background-color: #f4f6f8;
+    }
+
+    .hall-ticket {
+        background-color: white;
+        padding: 20px;
+        border: 2px solid black;
+    }
+</style>
+
+<div class="hall-ticket">
+    <h1>Father Agnel</h1>
+    <h2>Examination Hall Ticket</h2>
+</div>
