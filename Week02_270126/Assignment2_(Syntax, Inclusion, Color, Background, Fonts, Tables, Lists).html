@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Luxury Parking</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+        margin: 0;
+        background: radial-gradient(circle at top, #111, #000);
+        color: white;
+    }
+
+    /* POSTER */
+    .poster {
+        height: 360px;
+        background:
+        linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+        url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80");
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        padding-top: 110px;
+        border-bottom: 4px solid gold;
+    }
+
+    .poster h1 {
+        font-size: 55px;
+        color: gold;
+        letter-spacing: 5px;
+        text-shadow: 0 0 25px gold;
+    }
+
+    .poster p {
+        color: #ccc;
+        font-size: 20px;
+    }
+
+    /* PARKING ZONE */
+    .parking {
+        width: 95%;
+        margin: 30px auto;
+        border: 3px solid gold;
+        border-radius: 15px;
+        padding: 25px;
+        background: rgba(0,0,0,0.85);
+        box-shadow: 0 0 30px gold;
+    }
+
+    /* GRID */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+    }
+
+    .slot {
+        border: 2px solid gold;
+        border-radius: 12px;
+        padding: 10px;
+        background: #050505;
+        text-align: center;
+        box-shadow: 0 0 15px rgba(255,215,0,0.4);
+    }
+
+    .slot img {
+        width: 100%;
+        height: 140px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .slot h3 {
+        margin: 8px 0 4px;
+        color: gold;
+    }
+
+    .parked {
+        color: red;
+        font-weight: bold;
+    }
+
+    .free {
+        color: lime;
+        font-weight: bold;
+    }
+
+    /* TABLE */
+    table {
+        width: 100%;
+        margin-top: 30px;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border: 1px solid gold;
+        padding: 12px;
+        text-align: center;
+    }
+
+    th {
+        background: gold;
+        color: black;
+    }
+
+    tr:nth-child(even) {
+        background: #1b1b1b;
+    }
+
+    /* LIST */
+    ul {
+        margin-top: 20px;
+        margin-left: 25px;
+        line-height: 1.8;
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+        .poster h1 {
+            font-size: 38px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="poster">
+    <h1>LUXURY CAR PARKING</h1>
+    <p>McLaren • Ferrari • Lamborghini • BMW</p>
+</div>
+
+<div class="parking">
+
+    <!-- CAR GRID -->
+    <div class="grid">
+        <div class="slot"><img src="https://images.unsplash.com/photo-1617814074974-6c7b07dc9ed5?auto=format&fit=crop&w=800&q=80"><h3>McLaren 720S</h3><div class="parked">PARKED</div></div>
+        <div class="slot"><img src="https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?auto=format&fit=crop&w=800&q=80"><h3>Lamborghini</h3><div class="parked">PARKED</div></div>
+        <div class="slot"><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"><h3>Ferrari</h3><div class="parked">PARKED</div></div>
+        <div class="slot"><img src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?auto=format&fit=crop&w=800&q=80"><h3>BMW M5</h3><div class="parked">PARKED</div></div>
+        <div class="slot"><img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80"><h3>Audi R8</h3><div class="parked">PARKED</div></div>
+        <div class="slot"><img src="https://images.unsplash.com/photo-1614200179396-1f3c7f9f2f36?auto=format&fit=crop&w=800&q=80"><h3>Free Slot</h3><div class="free">AVAILABLE</div></div>
+    </div>
+
+    <!-- TABLE -->
+    <table>
+        <tr><th>Slot</th><th>Car</th><th>Status</th></tr>
+        <tr><td>01</td><td>McLaren</td><td>Parked</td></tr>
+        <tr><td>02</td><td>Lamborghini</td><td>Parked</td></tr>
+        <tr><td>03</td><td>Ferrari</td><td>Parked</td></tr>
+        <tr><td>04</td><td>BMW</td><td>Parked</td></tr>
+        <tr><td>05</td><td>—</td><td>Available</td></tr>
+        <tr><td>06</td><td>—</td><td>Available</td></tr>
+    </table>
+
+    <!-- LIST -->
+    <ul>
+        <li>Premium luxury parking zone</li>
+        <li>Neon-lit environment</li>
+        <li>High security monitoring</li>
+        <li>Limited premium slots</li>
+    </ul>
+
+</div>
+
+</body>
+</html>
