@@ -36,20 +36,15 @@
         text-shadow: 0 0 25px gold;
     }
 
-    .poster p {
-        color: #ccc;
-        font-size: 20px;
-    }
-
-    /* PARKING ZONE */
+    /* PARKING AREA */
     .parking {
         width: 95%;
         margin: 30px auto;
         border: 3px solid gold;
         border-radius: 15px;
         padding: 25px;
-        background: rgba(0,0,0,0.85);
-        box-shadow: 0 0 30px gold;
+        background: rgba(0,0,0,0.9);
+        box-shadow: 0 0 35px gold;
     }
 
     /* GRID */
@@ -60,12 +55,18 @@
     }
 
     .slot {
-        border: 2px solid gold;
+        position: relative;
         border-radius: 12px;
         padding: 10px;
-        background: #050505;
         text-align: center;
-        box-shadow: 0 0 15px rgba(255,215,0,0.4);
+        background: #050505;
+        animation: glow 3s infinite alternate;
+    }
+
+    @keyframes glow {
+        0%   { box-shadow: 0 0 10px #00f; }
+        50%  { box-shadow: 0 0 20px #00ffff; }
+        100% { box-shadow: 0 0 10px #7f00ff; }
     }
 
     .slot img {
@@ -73,6 +74,18 @@
         height: 140px;
         object-fit: cover;
         border-radius: 8px;
+    }
+
+    .slot-number {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        background: gold;
+        color: black;
+        padding: 4px 8px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 14px;
     }
 
     .slot h3 {
@@ -90,10 +103,9 @@
         font-weight: bold;
     }
 
-    /* TABLE */
     table {
         width: 100%;
-        margin-top: 30px;
+        margin-top: 35px;
         border-collapse: collapse;
     }
 
@@ -112,18 +124,10 @@
         background: #1b1b1b;
     }
 
-    /* LIST */
     ul {
-        margin-top: 20px;
+        margin-top: 25px;
         margin-left: 25px;
         line-height: 1.8;
-    }
-
-    /* MOBILE */
-    @media (max-width: 600px) {
-        .poster h1 {
-            font-size: 38px;
-        }
     }
 </style>
 </head>
@@ -132,39 +136,31 @@
 
 <div class="poster">
     <h1>LUXURY CAR PARKING</h1>
-    <p>McLaren • Ferrari • Lamborghini • BMW</p>
 </div>
 
 <div class="parking">
 
-    <!-- CAR GRID -->
     <div class="grid">
-        <div class="slot"><img src="https://images.unsplash.com/photo-1617814074974-6c7b07dc9ed5?auto=format&fit=crop&w=800&q=80"><h3>McLaren 720S</h3><div class="parked">PARKED</div></div>
-        <div class="slot"><img src="https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?auto=format&fit=crop&w=800&q=80"><h3>Lamborghini</h3><div class="parked">PARKED</div></div>
-        <div class="slot"><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"><h3>Ferrari</h3><div class="parked">PARKED</div></div>
-        <div class="slot"><img src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?auto=format&fit=crop&w=800&q=80"><h3>BMW M5</h3><div class="parked">PARKED</div></div>
-        <div class="slot"><img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80"><h3>Audi R8</h3><div class="parked">PARKED</div></div>
-        <div class="slot"><img src="https://images.unsplash.com/photo-1614200179396-1f3c7f9f2f36?auto=format&fit=crop&w=800&q=80"><h3>Free Slot</h3><div class="free">AVAILABLE</div></div>
+
+        <div class="slot"><div class="slot-number">01</div><img src="https://www.6speedonline.com/wp-content/uploads/2022/02/McLaren-GT-720s-Spider-Open-1024x683.jpg"><h3>McLaren</h3><div class="parked">PARKED</div></div>
+        <div class="slot"><div class="slot-number">02</div><img src="https://tse1.mm.bing.net/th/id/OIP.5wqh3CN0Xop2gdfTvc2vKAHaCh?w=1920&h=656&rs=1&pid=ImgDetMain&o=7&rm=3"><h3>Lamborghini</h3><div class="parked">PARKED</div></div>
+        <div class="slot"><div class="slot-number">03</div><img src="https://tse2.mm.bing.net/th/id/OIP.y0VVW0MFruDam55_16v-EQHaDu?rs=1&pid=ImgDetMain&o=7&rm=3"><h3>Ferrari</h3><div class="parked">PARKED</div></div>
+        <div class="slot"><div class="slot-number">04</div><img src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?auto=format&fit=crop&w=800&q=80"><h3>BMW</h3><div class="parked">PARKED</div></div>
+        <div class="slot"><div class="slot-number">05</div><img src="https://tse3.mm.bing.net/th/id/OIP.BI3DFLXa8cJ-Aj_M3YBRKQHaE8?w=1600&h=1067&rs=1&pid=ImgDetMain&o=7&rm=3"><h3>Audi</h3><div class="parked">PARKED</div></div>
+
+        <div class="slot"><div class="slot-number">06</div><img src="https://images.classic.com/vehicles/4c3a56e6f7627d6aaa990973d487820ece243545.jpg?auto=format&fit=crop&ar=16:9&w=672&h=576"><h3>Porsche</h3><div class="parked">PARKED</div></div>
+        <div class="slot"><div class="slot-number">07</div><img src="https://th.bing.com/th/id/OIP.byNjYsLMgo3aWWXXTHWldwHaE8?w=341&h=186&c=7&r=0&o=7&pid=1.7&rm=3"><h3>Bugatti</h3><div class="parked">PARKED</div></div>
+
+        <div class="slot"><div class="slot-number">08</div><img src="https://images.unsplash.com/photo-1614200179396-1f3c7f9f2f36?auto=format&fit=crop&w=800&q=80"><h3>Free</h3><div class="free">AVAILABLE</div></div>
+        <div class="slot"><div class="slot-number">09</div><img src="https://images.unsplash.com/photo-1614200179396-1f3c7f9f2f36?auto=format&fit=crop&w=800&q=80"><h3>Free</h3><div class="free">AVAILABLE</div></div>
+        <div class="slot"><div class="slot-number">10</div><img src="https://images.unsplash.com/photo-1614200179396-1f3c7f9f2f36?auto=format&fit=crop&w=800&q=80"><h3>Free</h3><div class="free">AVAILABLE</div></div>
+        <div class="slot"><div class="slot-number">11</div><img src="https://images.unsplash.com/photo-1614200179396-1f3c7f9f2f36?auto=format&fit=crop&w=800&q=80"><h3>Free</h3><div class="free">AVAILABLE</div></div>
+        <div class="slot"><div class="slot-number">12</div><img src="https://images.unsplash.com/photo-1614200179396-1f3c7f9f2f36?auto=format&fit=crop&w=800&q=80"><h3>Free</h3><div class="free">AVAILABLE</div></div>
+        <div class="slot"><div class="slot-number">13</div><img src="https://images.unsplash.com/photo-1614200179396-1f3c7f9f2f36?auto=format&fit=crop&w=800&q=80"><h3>Free</h3><div class="free">AVAILABLE</div></div>
+        <div class="slot"><div class="slot-number">14</div><img src="https://images.unsplash.com/photo-1614200179396-1f3c7f9f2f36?auto=format&fit=crop&w=800&q=80"><h3>Free</h3><div class="free">AVAILABLE</div></div>
+        <div class="slot"><div class="slot-number">15</div><img src="https://images.unsplash.com/photo-1614200179396-1f3c7f9f2f36?auto=format&fit=crop&w=800&q=80"><h3>Free</h3><div class="free">AVAILABLE</div></div>
+
     </div>
-
-    <!-- TABLE -->
-    <table>
-        <tr><th>Slot</th><th>Car</th><th>Status</th></tr>
-        <tr><td>01</td><td>McLaren</td><td>Parked</td></tr>
-        <tr><td>02</td><td>Lamborghini</td><td>Parked</td></tr>
-        <tr><td>03</td><td>Ferrari</td><td>Parked</td></tr>
-        <tr><td>04</td><td>BMW</td><td>Parked</td></tr>
-        <tr><td>05</td><td>—</td><td>Available</td></tr>
-        <tr><td>06</td><td>—</td><td>Available</td></tr>
-    </table>
-
-    <!-- LIST -->
-    <ul>
-        <li>Premium luxury parking zone</li>
-        <li>Neon-lit environment</li>
-        <li>High security monitoring</li>
-        <li>Limited premium slots</li>
-    </ul>
 
 </div>
 
