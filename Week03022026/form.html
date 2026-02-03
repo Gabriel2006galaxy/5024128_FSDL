@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Book Parking Slot</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+  <a class="navbar-brand text-warning" href="index.html">Teddy’s Luxury Car Parking</a>
+
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="menu">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="slots.html">Slots</a></li>
+      <li class="nav-item"><a class="nav-link active" href="form.html">Book</a></li>
+      <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<h1 class="text-center text-warning mt-4">BOOK YOUR PARKING SLOT</h1>
+
+<div class="container my-4">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+
+      <form class="parking" id="bookingForm">
+
+        <div class="mb-3">
+          <label class="form-label text-warning">Your Name</label>
+          <input type="text" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label text-warning">Car Number</label>
+          <input type="text" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label text-warning">Car Model</label>
+          <select id="carModel" class="form-select" required>
+            <option value="">Choose your car</option>
+            <option>McLaren</option>
+            <option>Lamborghini</option>
+            <option>Ferrari</option>
+            <option>BMW</option>
+            <option>Audi</option>
+            <option>Porsche</option>
+            <option>Bugatti</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label text-warning">Car Colour</label>
+          <input id="carColour" type="text" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label text-warning">Upload Your Car Photo</label>
+          <input id="carPhoto" type="file" class="form-control" accept="image/*" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label text-warning">Select Slot</label>
+          <select id="slotSelect" class="form-select" required>
+            <option value="">Choose a slot</option>
+            <option value="1">Slot 1</option>
+            <option value="2">Slot 2</option>
+            <option value="3">Slot 3</option>
+            <option value="4">Slot 4</option>
+            <option value="5">Slot 5</option>
+            <option value="6">Slot 6</option>
+            <option value="7">Slot 7</option>
+            <option value="8">Slot 8</option>
+            <option value="9">Slot 9</option>
+            <option value="10">Slot 10</option>
+            <option value="11">Slot 11</option>
+            <option value="12">Slot 12</option>
+            <option value="13">Slot 13</option>
+            <option value="14">Slot 14</option>
+            <option value="15">Slot 15</option>
+          </select>
+        </div>
+
+        <div class="text-center">
+          <button class="btn btn-warning btn-lg" type="submit">
+            Confirm Booking
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<script>
+document.getElementById("bookingForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  let slot = document.getElementById("slotSelect").value;
+  let model = document.getElementById("carModel").value;
+  let colour = document.getElementById("carColour").value;
+  let photoInput = document.getElementById("carPhoto");
+
+  if(localStorage.getItem("slot"+slot) === "booked"){
+    alert("This slot is already parked.");
+    return;
+  }
+
+  localStorage.setItem("slot"+slot, "booked");
+
+  let reader = new FileReader();
+  reader.onload = function(){
+    localStorage.setItem("lastCarImage", reader.result);
+    localStorage.setItem("lastCarModel", model);
+    localStorage.setItem("lastCarColour", colour);
+
+    alert("Slot " + slot + " booked!");
+    window.location.href = "index.html";
+  };
+
+  reader.readAsDataURL(photoInput.files[0]);
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
