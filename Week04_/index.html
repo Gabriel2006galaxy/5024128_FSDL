@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Academic System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🎓 Student Academic System</h1>
+
+<div class="container">
+
+    <!-- ADD STUDENT -->
+    <div class="card">
+        <h2>Add Student</h2>
+
+        <form id="studentForm">
+
+            <input type="text" id="studentId" placeholder="Student ID" required>
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="text" id="phone" placeholder="Phone" required>
+            <input type="email" id="email" placeholder="Email" required>
+
+            <h3>Subjects & Marks</h3>
+
+            <input type="text" id="sub1" placeholder="Subject 1">
+            <input type="number" id="mark1" placeholder="Marks 1">
+
+            <input type="text" id="sub2" placeholder="Subject 2">
+            <input type="number" id="mark2" placeholder="Marks 2">
+
+            <input type="text" id="sub3" placeholder="Subject 3">
+            <input type="number" id="mark3" placeholder="Marks 3">
+
+            <button type="submit">Save Student</button>
+
+        </form>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="card">
+        <input type="text" id="searchInput" placeholder="Search by ID or Name">
+        <button id="searchBtn">Search</button>
+        <button id="clearBtn">Clear</button>
+    </div>
+
+    <!-- TABLE -->
+    <div class="card">
+        <h2>Students</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Subjects</th>
+                    <th>Percentage</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="studentTable"></tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
